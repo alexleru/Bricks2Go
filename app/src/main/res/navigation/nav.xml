@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/loadingFragment">
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_loggedOutFragment"
+            app:destination="@id/loggedOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loggedOutFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.LoggedOutFragment"
+        android:label="fragment_logged_out"
+        tools:layout="@layout/fragment_logged_out" >
+        <action
+            android:id="@+id/action_loggedOutFragment_to_logginFragment"
+            app:destination="@id/logginFragment" />
+        <action
+            android:id="@+id/action_loggedOutFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loggedOutFragment_to_bottomNavFragment"
+            app:destination="@id/bottomNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/logginFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.LoginFragment"
+        android:label="fragment_loggin"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/bottomNavFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.BottomNavFragment"
+        android:label="fragment_bottom_nav"
+        tools:layout="@layout/fragment_bottom_nav" />
+</navigation>

@@ -1,0 +1,93 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="btn_stroke_white">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_stroke_white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btn_stroke_blue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_stroke_blue</item>
+    </style>
+
+    <style name="btn_bckgn_white_text_blue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/btn_bckgn_white_text_blue</item>
+        <item name="android:layout_margin">@dimen/normal</item>
+    </style>
+
+    <style name="btn_bckgn_yellow">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/btn_bckgn_yellow</item>
+        <item name="android:layout_margin">@dimen/normal</item>
+    </style>
+
+    <style name="btn_bckgn_yellow_without_margin">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/btn_bckgn_yellow</item>
+    </style>
+
+    <style name="image_level">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="text_level_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/text_level</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text_level_description">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light"</item>
+        <item name="android:textColor">@color/text_level</item>
+    </style>
+
+    <style name="edit_stroke_blue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">@dimen/normal</item>
+        <item name="android:layout_marginEnd">@dimen/normal</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_level</item>
+        <item name="android:background">@drawable/btn_stroke_blue</item>
+    </style>
+
+    <style name="view_circle_bckgn_blue_stroke_white">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@drawable/view_circle_bckgn_blue_stroke_white</item>
+    </style>
+
+    <style name="view_circle_small_bckgn_blue_stroke_white">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/view_circle_small_bckgn_blue_stroke_white</item>
+    </style>
+
+    <style name="card_image_level">card_image_level</style>
+
+</resources>

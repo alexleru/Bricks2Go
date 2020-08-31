@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/levelFragmentBottom">
+
+    <fragment
+        android:id="@+id/levelFragmentBottom"
+        android:name="ru.alexleru.brickseasy.ui.fragment.LevelFragment"
+        android:label="fragment_level"
+        tools:layout="@layout/fragment_level" >
+        <action
+            android:id="@+id/action_levelFragmentBottom_to_listOfModelFragment"
+            app:destination="@id/listOfModelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragmentBottom"
+        android:name="ru.alexleru.brickseasy.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/detailOfModelFragmentBottom"
+        android:name="ru.alexleru.brickseasy.ui.fragment.detailOfModelFragment.DetailOfModelFragment"
+        android:label="fragment_detail_of_model"
+        tools:layout="@layout/fragment_detail_of_model" >
+        <action
+            android:id="@+id/action_detailOfModelFragmentBottom_to_assemblyFragment"
+            app:destination="@id/assemblyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listOfModelFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.listOfModelFragment.ListOfModelFragment"
+        android:label="fragment_list_of_model"
+        tools:layout="@layout/fragment_list_of_model" >
+        <action
+            android:id="@+id/action_listOfModelFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.ChoiceFragment"
+        android:label="fragment_choice"
+        tools:layout="@layout/fragment_choice" >
+        <action
+            android:id="@+id/action_choiceFragment_to_detailOfModelFragmentBottom"
+            app:destination="@id/detailOfModelFragmentBottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/assemblyFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.assymblyFragment.AssemblyFragment"
+        android:label="fragment_assembly"
+        tools:layout="@layout/fragment_assembly" >
+        <action
+            android:id="@+id/action_assemblyFragment_to_savePhotoFragment"
+            app:destination="@id/savePhotoFragment" />
+        <action
+            android:id="@+id/action_assemblyFragment_to_levelFragmentBottom"
+            app:destination="@id/levelFragmentBottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/savePhotoFragment"
+        android:name="ru.alexleru.brickseasy.SavePhotoFragment"
+        android:label="fragment_save_photo"
+        tools:layout="@layout/fragment_save_photo" />
+</navigation>

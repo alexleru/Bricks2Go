@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.fragment.LoggedOutFragment">
+
+    <Button
+        android:id="@+id/login"
+        style="@style/btn_bckgn_white_text_blue"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/login"
+        app:layout_constraintBottom_toTopOf="@+id/without_registration"
+        app:layout_constraintEnd_toStartOf="@+id/registration"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/registration"
+        style="@style/btn_bckgn_yellow_without_margin"
+        android:layout_marginBottom="16dp"
+        android:text="@string/registration"
+        app:layout_constraintBottom_toTopOf="@+id/without_registration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/login"/>
+
+    <Button
+        android:id="@+id/without_registration"
+        style="@style/btn_stroke_white"
+        android:layout_marginHorizontal="@dimen/normal"
+        android:layout_marginBottom="32dp"
+        android:text="@string/continue_without_registration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

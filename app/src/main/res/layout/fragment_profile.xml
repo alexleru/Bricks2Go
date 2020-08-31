@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ProfileFragment">
+
+
+    <View
+        android:id="@+id/view_rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_big_circle"
+        style="@style/view_circle_bckgn_blue_stroke_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:text="avatar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_big_circle"
+        app:layout_constraintEnd_toEndOf="@+id/view_big_circle"
+        app:layout_constraintStart_toStartOf="@+id/view_big_circle"
+        app:layout_constraintTop_toTopOf="@+id/view_big_circle" />
+
+    <FrameLayout
+        android:id="@+id/view3"
+        style="@style/view_circle_small_bckgn_blue_stroke_white"
+        app:layout_constraintBottom_toBottomOf="@+id/view_big_circle"
+        app:layout_constraintEnd_toEndOf="@+id/view_big_circle"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/view_rectangle">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_pencil" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard"
+        android:fontFamily="sans-serif-black"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_big_circle" />
+
+    <TextView
+        android:id="@+id/text_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/minimum"
+        android:text="level"
+        android:textColor="@color/black_transparent"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_marginHorizontal="@dimen/normal"
+        android:layout_marginTop="@dimen/maximum"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_level"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/btn_bckgn_white_text_blue"
+        android:text="ВЫЙТИ ИЗ УЧЕТНОЙ ЗАПИСИ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
