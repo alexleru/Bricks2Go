@@ -37,10 +37,23 @@
         android:id="@+id/logginFragment"
         android:name="ru.alexleru.brickseasy.ui.fragment.LoginFragment"
         android:label="fragment_loggin"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_logginFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bottomNavFragment"
         android:name="ru.alexleru.brickseasy.ui.fragment.BottomNavFragment"
         android:label="fragment_bottom_nav"
         tools:layout="@layout/fragment_bottom_nav" />
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <action
+            android:id="@+id/action_successFragment_to_bottomNavFragment"
+            app:destination="@id/bottomNavFragment" />
+    </fragment>
 </navigation>

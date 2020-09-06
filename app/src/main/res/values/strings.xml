@@ -5,4 +5,5 @@
     <string name="continue_without_registration">ПРОДОЛЖИТЬ БЕЗ РЕГИСТРАЦИИ</string>
     <string name="registration">ЗАРЕГИСТРИРОВАТЬСЯ</string>
     <string name="login">ВОЙТИ</string>
+    <integer name="com_vk_sdk_AppId">7583418</integer>
 </resources>

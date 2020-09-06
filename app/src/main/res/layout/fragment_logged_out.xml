@@ -23,7 +23,8 @@
     <Button
         android:id="@+id/registration"
         style="@style/btn_bckgn_yellow_without_margin"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal"
         android:text="@string/registration"
         app:layout_constraintBottom_toTopOf="@+id/without_registration"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,6 +41,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,8 @@
     <style name="btn_stroke_white">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">52dp</item>
+        <item name="android:paddingStart">@dimen/normal</item>
+        <item name="android:paddingEnd">@dimen/normal</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/btn_stroke_white</item>
         <item name="android:textColor">@color/white</item>
@@ -89,5 +91,11 @@
     </style>
 
     <style name="card_image_level">card_image_level</style>
+
+    <style name="text_white">text_white
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
 </resources>
