@@ -7,11 +7,22 @@
     android:background="@color/colorPrimary"
     tools:context=".ui.fragment.LoggedOutFragment">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/login"
         style="@style/btn_bckgn_white_text_blue"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginBottom="@dimen/normal"
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/without_registration"
         app:layout_constraintEnd_toStartOf="@+id/registration"
@@ -23,14 +34,14 @@
     <Button
         android:id="@+id/registration"
         style="@style/btn_bckgn_yellow_without_margin"
-        android:layout_marginBottom="@dimen/normal"
         android:layout_marginEnd="@dimen/normal"
+        android:layout_marginBottom="@dimen/normal"
         android:text="@string/registration"
         app:layout_constraintBottom_toTopOf="@+id/without_registration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@+id/login"/>
+        app:layout_constraintStart_toEndOf="@+id/login" />
 
     <Button
         android:id="@+id/without_registration"
@@ -44,12 +55,32 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="@dimen/normal"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif-black"
+        android:text="Собирай новые лего \nобъекты из своий деталей"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="Здесь ты найдешь инструкцию по сборке новых лего наборов"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

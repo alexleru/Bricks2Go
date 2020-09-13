@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.LoginFragment">
 
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/normal"
+        android:layout_marginStart="@dimen/normal"
+        android:src="@drawable/ic_back_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -13,14 +23,16 @@
         android:layout_marginStart="@dimen/normal"
         android:layout_marginTop="@dimen/normal"
         android:fontFamily="sans-serif-black"
-        android:text="Войти"
+        android:text="@string/Enter"
         android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/image_back" />
 
     <EditText
         android:id="@+id/edit_email"
         style="@style/edit_stroke_blue"
+        android:hint="@string/e_mail"
+        android:layout_marginTop="@dimen/standard"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="@dimen/normal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +42,7 @@
     <EditText
         android:id="@+id/edit_password"
         style="@style/edit_stroke_blue"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:paddingHorizontal="@dimen/normal"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,7 +1,6 @@
 package ru.alexleru.brickseasy
 
-import com.vk.api.sdk.VK
-
 var APP_ACTIVITY = MainActivity()
-var APP_token : Int = 0
-var APP_Name : String = ""
+val RC_SIGN_IN = 899
+var APP_token: Int = 0
+var APP_Name: String = ""

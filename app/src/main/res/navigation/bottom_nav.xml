@@ -18,7 +18,11 @@
         android:id="@+id/profileFragmentBottom"
         android:name="ru.alexleru.brickseasy.ui.fragment.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragmentBottom_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailOfModelFragmentBottom"
         android:name="ru.alexleru.brickseasy.ui.fragment.detailOfModelFragment.DetailOfModelFragment"
@@ -63,4 +67,9 @@
         android:name="ru.alexleru.brickseasy.SavePhotoFragment"
         android:label="fragment_save_photo"
         tools:layout="@layout/fragment_save_photo" />
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="ru.alexleru.brickseasy.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit" />
 </navigation>

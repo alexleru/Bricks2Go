@@ -13,6 +13,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         image_vk.setOnClickListener { APP_ACTIVITY.vkLogin() }
+        image_google.setOnClickListener { APP_ACTIVITY.googleLogin() }
+        image_back.setOnClickListener {
+            Navigation.findNavController(view)
+                .navigate(R.id.action_logginFragment_to_loggedOutFragment)
+        }
 
     }
 

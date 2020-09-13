@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_loadingFragment_to_loggedOutFragment"
             app:destination="@id/loggedOutFragment" />
+        <action
+            android:id="@+id/action_loadingFragment_to_bottomNavFragment"
+            app:destination="@id/bottomNavFragment" />
     </fragment>
     <fragment
         android:id="@+id/loggedOutFragment"
@@ -32,7 +35,11 @@
         android:id="@+id/registrationFragment"
         android:name="ru.alexleru.brickseasy.ui.fragment.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loggedOutFragment"
+            app:destination="@id/loggedOutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/logginFragment"
         android:name="ru.alexleru.brickseasy.ui.fragment.LoginFragment"
@@ -41,6 +48,9 @@
         <action
             android:id="@+id/action_logginFragment_to_successFragment"
             app:destination="@id/successFragment" />
+        <action
+            android:id="@+id/action_logginFragment_to_loggedOutFragment"
+            app:destination="@id/loggedOutFragment" />
     </fragment>
     <fragment
         android:id="@+id/bottomNavFragment"

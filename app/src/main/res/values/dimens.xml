@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="normal">16dp</dimen>
-    <dimen name="maximum">10dp</dimen>
+    <dimen name="maximum">30dp</dimen>
     <dimen name="standard">20dp</dimen>
     <dimen name="minimum">10dp</dimen>
 </resources>

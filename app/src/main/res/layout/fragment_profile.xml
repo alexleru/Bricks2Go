@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ProfileFragment">
 
-
     <View
         android:id="@+id/view_rectangle"
         android:layout_width="wrap_content"
@@ -16,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
+    <ImageView
         android:id="@+id/view_big_circle"
         style="@style/view_circle_bckgn_blue_stroke_white"
         android:layout_marginTop="20dp"
@@ -38,22 +37,6 @@
         app:layout_constraintStart_toStartOf="@+id/view_big_circle"
         app:layout_constraintTop_toTopOf="@+id/view_big_circle" />
 
-    <FrameLayout
-        android:id="@+id/view3"
-        style="@style/view_circle_small_bckgn_blue_stroke_white"
-        app:layout_constraintBottom_toBottomOf="@+id/view_big_circle"
-        app:layout_constraintEnd_toEndOf="@+id/view_big_circle"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/view_rectangle">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_pencil" />
-    </FrameLayout>
 
     <TextView
         android:id="@+id/text_name"
@@ -61,24 +44,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/standard"
         android:fontFamily="sans-serif-black"
-        android:text="Name"
         android:textColor="@color/black"
         android:textSize="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_big_circle" />
-
-    <TextView
-        android:id="@+id/text_level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/minimum"
-        android:text="level"
-        android:textColor="@color/black_transparent"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+        app:layout_constraintTop_toBottomOf="@+id/view_big_circle"
+        tools:text="Name" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -89,15 +60,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_level"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
         tools:src="@tools:sample/avatars" />
 
-    <Button
-        android:id="@+id/button2"
-        style="@style/btn_bckgn_white_text_blue"
-        android:text="ВЫЙТИ ИЗ УЧЕТНОЙ ЗАПИСИ"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
