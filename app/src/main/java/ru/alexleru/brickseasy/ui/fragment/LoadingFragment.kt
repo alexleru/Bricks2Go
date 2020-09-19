@@ -16,22 +16,24 @@ class LoadingFragment : Fragment(R.layout.fragment_loading) {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
             nextFragment(view)
-        }, 3000)
+        }, 1000)
 
 
     }
 
     private fun nextFragment(view: View) {
+//
+//        APP_ACTIVITY.googleSignInClient()?.signOut()
+//        if (VK.isLoggedIn() || GoogleSignIn.getLastSignedInAccount(APP_ACTIVITY) != null)
+//            Navigation.findNavController(view)
+//                .navigate(R.id.action_loadingFragment_to_bottomNavFragment)
+//        else
+//            Navigation.findNavController(view)
+//                .navigate(R.id.action_loadingFragment_to_loggedOutFragment)
 
-        APP_ACTIVITY.googleSignInClient()?.signOut()
-        val a = VK.isLoggedIn()
-        val b = GoogleSignIn.getLastSignedInAccount(APP_ACTIVITY)
-        if (VK.isLoggedIn() || GoogleSignIn.getLastSignedInAccount(APP_ACTIVITY) != null)
-            Navigation.findNavController(view)
-                .navigate(R.id.action_loadingFragment_to_bottomNavFragment)
-        else
-            Navigation.findNavController(view)
-                .navigate(R.id.action_loadingFragment_to_loggedOutFragment)
+        Navigation.findNavController(view)
+            .navigate(R.id.action_loadingFragment_to_bottomNavFragment)
     }
+
 }
 

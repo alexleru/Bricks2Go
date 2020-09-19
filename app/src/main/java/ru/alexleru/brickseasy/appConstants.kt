@@ -1,6 +1,8 @@
 package ru.alexleru.brickseasy
 
+import ru.alexleru.brickseasy.ui.fragment.BottomNavFragment
+
 var APP_ACTIVITY = MainActivity()
-val RC_SIGN_IN = 899
-var APP_token: Int = 0
-var APP_Name: String = ""
+var APP_TOOLBAR = BottomNavFragment()
+const val RC_SIGN_IN = 899
+var APP_Name = ""

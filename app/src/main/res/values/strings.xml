@@ -10,5 +10,12 @@
     <string name="password">password</string>
     <string name="name">name</string>
     <string name="Save">СОХРАНИТЬ</string>
+    <string name="choose_level">Выберите уровень</string>
+    <string name="choose_assembly">Выберите модель</string>
+    <string name="details">Необходимые детали</string>
+    <string name="favorites">Избранное</string>
+    <string name="beginner">Начальный</string>
+    <string name="professional">Профессионал</string>
+    <string name="specialist">Специалист</string>
     <integer name="com_vk_sdk_AppId">7583418</integer>
 </resources>

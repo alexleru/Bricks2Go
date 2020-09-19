@@ -72,4 +72,13 @@
         android:name="ru.alexleru.brickseasy.ProfileEditFragment"
         android:label="fragment_profile_edit"
         tools:layout="@layout/fragment_profile_edit" />
+    <fragment
+        android:id="@+id/listOfFavoritesFragment"
+        android:name="ru.alexleru.brickseasy.listOfFavoritesFragment"
+        android:label="fragment_list_of_favorites"
+        tools:layout="@layout/fragment_list_of_favorites" >
+        <action
+            android:id="@+id/action_listOfFavoritesFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
 </navigation>

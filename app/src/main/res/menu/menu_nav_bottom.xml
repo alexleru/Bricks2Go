@@ -6,11 +6,11 @@
         android:icon="@drawable/ic_home"
         android:title="home" />
     <item
-        android:id="@+id/listOfModelFragment"
+        android:id="@+id/listOfFavoritesFragment"
         android:icon="@drawable/ic_favourites"
         android:title="favourites" />
-    <item
-        android:id="@+id/profileFragmentBottom"
-        android:icon="@drawable/ic_profile"
-        android:title="profile" />
+<!--    <item-->
+<!--        android:id="@+id/profileFragmentBottom"-->
+<!--        android:icon="@drawable/ic_profile"-->
+<!--        android:title="profile" />-->
 </menu>

@@ -23,14 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-
         APP_ACTIVITY = this
     }
+
 
 
     fun googleLogin() {
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun googleSignInClient(): GoogleSignInClient? {
+    private fun googleSignInClient(): GoogleSignInClient? {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .build()
         val mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
