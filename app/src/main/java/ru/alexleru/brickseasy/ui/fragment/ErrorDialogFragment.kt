@@ -1,10 +1,10 @@
-package ru.alexleru.brickseasy
+package ru.alexleru.brickseasy.ui.fragment
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
+import ru.alexleru.brickseasy.R
 
 class ErrorDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

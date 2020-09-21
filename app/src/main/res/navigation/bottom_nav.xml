@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_detailOfModelFragmentBottom_to_assemblyFragment"
             app:destination="@id/assemblyFragment" />
+        <argument
+            android:name="currentInstruction"
+            app:argType="ru.alexleru.brickseasy.api.models.Instruction" />
     </fragment>
     <fragment
         android:id="@+id/listOfModelFragment"
@@ -40,6 +43,10 @@
         <action
             android:id="@+id/action_listOfModelFragment_to_choiceFragment"
             app:destination="@id/choiceFragment" />
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
     <fragment
         android:id="@+id/choiceFragment"
@@ -49,6 +56,9 @@
         <action
             android:id="@+id/action_choiceFragment_to_detailOfModelFragmentBottom"
             app:destination="@id/detailOfModelFragmentBottom" />
+        <argument
+            android:name="currentInstruction"
+            app:argType="ru.alexleru.brickseasy.api.models.Instruction" />
     </fragment>
     <fragment
         android:id="@+id/assemblyFragment"
@@ -64,17 +74,17 @@
     </fragment>
     <fragment
         android:id="@+id/savePhotoFragment"
-        android:name="ru.alexleru.brickseasy.SavePhotoFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.SavePhotoFragment"
         android:label="fragment_save_photo"
         tools:layout="@layout/fragment_save_photo" />
     <fragment
         android:id="@+id/profileEditFragment"
-        android:name="ru.alexleru.brickseasy.ProfileEditFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.ProfileEditFragment"
         android:label="fragment_profile_edit"
         tools:layout="@layout/fragment_profile_edit" />
     <fragment
         android:id="@+id/listOfFavoritesFragment"
-        android:name="ru.alexleru.brickseasy.listOfFavoritesFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.ListOfFavoritesFragment"
         android:label="fragment_list_of_favorites"
         tools:layout="@layout/fragment_list_of_favorites" >
         <action
