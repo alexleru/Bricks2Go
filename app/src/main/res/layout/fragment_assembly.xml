@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.assymblyFragment.AssemblyFragment">
+    tools:context=".ui.fragment.assemblyFragment.AssemblyFragment">
 
 
     <TextView
@@ -84,6 +84,7 @@
     <Button
         android:id="@+id/button_take_photo"
         style="@style/btn_bckgn_yellow"
+        android:visibility="gone"
         android:layout_marginTop="@dimen/maximum"
         android:text="СДЕЛАТЬ ФОТО"
         app:layout_constraintEnd_toEndOf="parent"

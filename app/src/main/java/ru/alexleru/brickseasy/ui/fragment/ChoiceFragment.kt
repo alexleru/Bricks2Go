@@ -7,8 +7,9 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_choice.*
+import ru.alexleru.brickseasy.APP_TOOLBAR
+import ru.alexleru.brickseasy.BASE_URL_PHOTO
 import ru.alexleru.brickseasy.R
-import ru.alexleru.brickseasy.ui.fragment.listOfModelFragment.ListOfModelFragmentArgs
 
 class ChoiceFragment : Fragment(R.layout.fragment_choice) {
     private val args: ChoiceFragmentArgs by navArgs()
@@ -16,17 +17,21 @@ class ChoiceFragment : Fragment(R.layout.fragment_choice) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        APP_TOOLBAR.setTextToolbar(getString(R.string.empty_string))
+
         text_title_model_choice.text = args.currentInstruction.name
 
         Picasso.get()
-            .load(args.currentInstruction.mainPhoto.path)
+            .load(BASE_URL_PHOTO + args.currentInstruction.mainPhoto.path)
             .error(R.drawable.clock)
             .into(image_model_choice)
 
-        val action =
+
         button_model_choice.setOnClickListener {
+            val action =
+                ChoiceFragmentDirections.actionChoiceFragmentToDetailOfModelFragmentBottom(args.currentInstruction)
             Navigation.findNavController(view)
-                .navigate(R.id.action_choiceFragment_to_detailOfModelFragmentBottom)
+                .navigate(action)
         }
     }
 }

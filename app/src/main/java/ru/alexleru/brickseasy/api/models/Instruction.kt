@@ -4,6 +4,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 import java.util.*
+import kotlin.collections.ArrayList
 
 @Parcelize
 data class Instruction(
@@ -28,5 +29,5 @@ data class Photo(
 ) : Parcelable
 
 fun List<Instruction>.filterLevel(level: Int) = this.filter { it.difficulty == level }
-fun List<Instruction>.filterByID(ids: Array<UUID>) = this.filter{it.id in ids}
+fun List<Instruction>.filterByID(ids: ArrayList<UUID>) = this.filter{it.id in ids}
 

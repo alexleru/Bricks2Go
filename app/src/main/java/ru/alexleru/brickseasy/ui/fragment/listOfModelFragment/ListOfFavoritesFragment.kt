@@ -1,4 +1,4 @@
-package ru.alexleru.brickseasy.ui.fragment
+package ru.alexleru.brickseasy.ui.fragment.listOfModelFragment
 
 import android.os.Bundle
 import android.view.View
@@ -11,9 +11,7 @@ import ru.alexleru.brickseasy.APP_ACTIVITY
 import ru.alexleru.brickseasy.APP_TOOLBAR
 import ru.alexleru.brickseasy.R
 import ru.alexleru.brickseasy.api.models.Instruction
-import ru.alexleru.brickseasy.api.models.filterLevel
-import ru.alexleru.brickseasy.ui.fragment.listOfModelFragment.ListOfModelAdapter
-import ru.alexleru.brickseasy.ui.fragment.listOfModelFragment.ListOfModelFragmentDirections
+import ru.alexleru.brickseasy.api.models.filterByID
 
 class ListOfFavoritesFragment : Fragment(R.layout.fragment_list_of_favorites) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,13 +25,16 @@ class ListOfFavoritesFragment : Fragment(R.layout.fragment_list_of_favorites) {
             layoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
             setHasFixedSize(true)
             adapter = ListOfModelAdapter(
-                APP_ACTIVITY.instructions.filterLevel(1) //TODO
+                APP_ACTIVITY.instructions.filterByID(APP_ACTIVITY.getPreference())
             ) { instruction -> instructionItemClicked(instruction) }
         }
     }
 
     private fun instructionItemClicked(instruction: Instruction) {
-        val action = ListOfFavoritesFragmentDirections.actionListOfFavoritesFragmentToChoiceFragment(instruction)
+        val action =
+            ListOfFavoritesFragmentDirections.actionListOfFavoritesFragmentToChoiceFragment(
+                instruction
+            )
         Navigation.findNavController(APP_ACTIVITY, R.id.fragment_bottom_nav_host)
             .navigate(action)
     }

@@ -17,5 +17,7 @@
     <string name="beginner">Начальный</string>
     <string name="professional">Профессионал</string>
     <string name="specialist">Специалист</string>
+    <string name="empty_string">""</string>
+    <string name="go_to_assembly">ПРИСТУПИТЬ К СБОРКЕ</string>
     <integer name="com_vk_sdk_AppId">7583418</integer>
 </resources>

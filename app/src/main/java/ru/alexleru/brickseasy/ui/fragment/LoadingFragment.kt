@@ -13,7 +13,7 @@ class LoadingFragment : Fragment(R.layout.fragment_loading) {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
             nextFragment(view)
-        }, 1000)
+        }, 3000)
 
 
     }

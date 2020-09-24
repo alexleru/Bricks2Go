@@ -1,28 +1,34 @@
 package ru.alexleru.brickseasy.ui.fragment.listOfModelFragment
 
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_of_list_model.view.*
 import ru.alexleru.brickseasy.APP_ACTIVITY
+import ru.alexleru.brickseasy.BASE_URL_PHOTO
 import ru.alexleru.brickseasy.R
 import ru.alexleru.brickseasy.api.models.Instruction
 
-class ListOfModelAdapter(private val items: List<Instruction>, private val clickListener: (Instruction) -> Unit ) :
+class ListOfModelAdapter(
+    private val items: List<Instruction>,
+    private val clickListener: (Instruction) -> Unit
+) :
     RecyclerView.Adapter<ListOfModelAdapter.VHModels>() {
 
     class VHModels(view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(instruction: Instruction, clickListener: (Instruction) -> Unit){
+        fun bind(instruction: Instruction, clickListener: (Instruction) -> Unit) {
             val image = itemView.image_model
             Picasso.get()
-                .load(instruction.mainPhoto.path)
+                .load(BASE_URL_PHOTO + instruction.mainPhoto.path)
                 .error(R.drawable.clock)
                 .into(image)
-            itemView.setOnClickListener{clickListener(instruction)}
-            itemView.image_heart.setOnClickListener{ TODO()}
+
+            itemView.setOnClickListener { clickListener(instruction) }
         }
     }
 
@@ -35,10 +41,29 @@ class ListOfModelAdapter(private val items: List<Instruction>, private val click
 
     override fun onBindViewHolder(holder: VHModels, position: Int) {
         holder.bind(items[position], clickListener)
+
+        isFavorite(holder, APP_ACTIVITY.getPreference().contains(items[position].id))
+
+        holder.itemView.image_heart.setOnClickListener {
+            var status = APP_ACTIVITY.getPreference().contains(items[position].id)
+            isFavorite(holder, !status)
+            if (status) APP_ACTIVITY.deletePreference(items[position].id)
+            else APP_ACTIVITY.setPreference(items[position].id)
+        }
+
     }
 
-    private fun nextFragment() {
-            Navigation.findNavController(APP_ACTIVITY, R.id.fragment_bottom_nav_host)
-                .navigate(R.id.action_listOfFavoritesFragment_to_choiceFragment)
+    private fun isFavorite(holder: VHModels, status: Boolean) {
+        val imageHeartDrawable = holder.itemView.image_heart.drawable.mutate()
+        if (status) setColor(imageHeartDrawable, R.color.colorPrimary)
+        else setColor(imageHeartDrawable, R.color.colorPrimary40)
     }
+
+    private fun setColor(imageHeartDrawable: Drawable, color: Int) {
+        imageHeartDrawable.setColorFilter(
+            ContextCompat.getColor(APP_ACTIVITY.applicationContext, color),
+            PorterDuff.Mode.MULTIPLY
+        )
+    }
+
 }

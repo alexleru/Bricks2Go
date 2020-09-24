@@ -62,7 +62,7 @@
     </fragment>
     <fragment
         android:id="@+id/assemblyFragment"
-        android:name="ru.alexleru.brickseasy.ui.fragment.assymblyFragment.AssemblyFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.assemblyFragment.AssemblyFragment"
         android:label="fragment_assembly"
         tools:layout="@layout/fragment_assembly" >
         <action
@@ -71,6 +71,9 @@
         <action
             android:id="@+id/action_assemblyFragment_to_levelFragmentBottom"
             app:destination="@id/levelFragmentBottom" />
+        <argument
+            android:name="currentInstruction"
+            app:argType="ru.alexleru.brickseasy.api.models.Instruction" />
     </fragment>
     <fragment
         android:id="@+id/savePhotoFragment"
@@ -84,7 +87,7 @@
         tools:layout="@layout/fragment_profile_edit" />
     <fragment
         android:id="@+id/listOfFavoritesFragment"
-        android:name="ru.alexleru.brickseasy.ui.fragment.ListOfFavoritesFragment"
+        android:name="ru.alexleru.brickseasy.ui.fragment.listOfModelFragment.ListOfFavoritesFragment"
         android:label="fragment_list_of_favorites"
         tools:layout="@layout/fragment_list_of_favorites" >
         <action
