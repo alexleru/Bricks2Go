@@ -13,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import ru.alexleru.brickseasy.api.RequestsService
 import ru.alexleru.brickseasy.api.models.Instruction
 import ru.alexleru.brickseasy.databinding.ActivityMainBinding
+import ru.alexleru.brickseasy.ui.fragment.LoadingFragment
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 response: Response<List<Instruction>>
             ) {
                 instructions.addAll(response.body()!!)
+                LoadingFragment().nextFragment()
             }
 
             override fun onFailure(call: Call<List<Instruction>>, t: Throwable) {

@@ -2,11 +2,13 @@ package ru.alexleru.brickseasy.ui.fragment.listOfModelFragment
 
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_of_list_model.view.*
 import ru.alexleru.brickseasy.APP_ACTIVITY
@@ -23,6 +25,7 @@ class ListOfModelAdapter(
     class VHModels(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(instruction: Instruction, clickListener: (Instruction) -> Unit) {
             val image = itemView.image_model
+
             Picasso.get()
                 .load(BASE_URL_PHOTO + instruction.mainPhoto.path)
                 .error(R.drawable.clock)
